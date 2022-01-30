@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="app.js"></script>
+
+    </head>
+    <body>
+        <div class="upper">
+            <div class="details">
+               
+                <h1>
+                    Rainy 53C
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ipsum, ipsa deserunt aliquam, autem consequuntur quibusdam nemo excepturi ex blanditiis repellat? Deserunt laboriosam accusamus facere? Sed repudiandae quidem ea fugit!
+                </p>
+
+               
+                
+            
+            </div>
+
+           
+                <img src="cloudy.png" class="imagee">
+           
+
+
+    
+            
+        </div>
+
+        <div class="butts">
+        
+       
+            <div class="many" id="box">
+
+               
+
+                <div class="card">
+
+                
+                    <img class="imaage" src="c1.jpg">
+                    <div class="card-text">
+                        <span class="date">1 days</span>
+                        <h2>post one</h2>
+                        <p>this is bullshit. hard af shit.  trying new shit</p>
+                    </div>
+                    <div class="card-stats">
+                        <div id="wind">
+                            qqq
+
+                        </div>
+                        <div id="humidity">
+                            qqq
+
+                        </div>
+                        <div id="cloud">
+                            qqq
+                        </div>
+                    </div>
+        
+                </div>
+
+                <div class="card">
+                    <img class="imaage" src="c1.jpg">
+                    <div class="card-text">
+                        <span class="date">2 days</span>
+                        <h2>post one</h2>
+                        <p>this is bullshit. hard af shit.  trying new shit</p>
+                    </div>
+                    <div class="card-stats"></div>
+
+                </div>
+
+                <div class="card">
+                    <img class="imaage" src="c1.jpg">
+                    <div class="card-text">
+                        <span class="date">3 days</span>
+                        <h2>post one</h2>
+                        <p>this is bullshit. hard af shit.  trying new shit</p>
+                    </div>
+                    <div class="card-stats"></div>
+
+                </div>
+
+                <div class="card">
+                    <img class="imaage" src="c1.jpg">
+                    <div class="card-text">
+                        <span class="date">4 days</span>
+                        <h2>post one</h2>
+                        <p>this is bullshit. hard af shit.  trying new shit</p>
+                    </div>
+                    <div class="card-stats"></div>
+
+                </div>
+
+                <div class="card">
+                    <img class="imaage" src="c1.jpg">
+                    <div class="card-text">
+                        <span class="date">5 days</span>
+                        <h2>post one</h2>
+                        <p>this is bullshit. hard af shit.  trying new shit</p>
+                    </div>
+                    <div class="card-stats"></div>
+
+                </div>
+
+
+                <div class="card">
+                    <img class="imaage" src="c1.jpg">
+                    <div class="card-text">
+                        <span class="date">6 days</span>
+                        <h2>post one</h2>
+                        <p>this is bullshit. hard af shit.  trying new shit</p>
+                    </div>
+                    <div class="card-stats"></div>
+
+                </div>
+
+            
+
+            </div>
+
+            <div class="left" id="left">
+
+            </div>
+
+
+            <div class="right" id="right">
+
+            </div>
+
+           
+        </div>
+            
+        <script type="text/javascript">
+            var button = document.getElementById('right');
+            button.onclick = function () {
+            var container = document.getElementById('box');
+            
+            sideScroll(container,'right',.25,1000,10);
+            /*
+            console.log("im here");
+                container.scrollBy({
+                    top: 0,
+                    left: +500,
+                    behavior: 'smooth'
+                })
+                */
+
+            };
+            
+            var back = document.getElementById('left');
+            back.onclick = function () {
+            var container = document.getElementById('box');
+            sideScroll(container,'left',.25,1000,10);
+            };      
+      
+      
+          
+            
+            function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+            if(direction == 'left'){
+               element.scrollLeft -= step;
+            } else {
+               element.scrollLeft += step;
+            }
+            scrollAmount += step;
+            if(scrollAmount >= distance){
+               window.clearInterval(slideTimer);
+            }
+            }, speed);
+            }
+            
+         </script>
+            
+    </body>
+</html>
